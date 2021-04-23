@@ -1,6 +1,12 @@
 import React from 'react';
-import './Event.scss';
 import Button from '../Button/Button';
+import './Event.scss';
+
+import { Link } from 'react-router-dom';
+
+const link = {
+    event: 'Find out more',
+  }
 
 const Event = ({
     image,
@@ -15,9 +21,10 @@ const Event = ({
             </figure>
             <h3 className="Event-Title">{title}</h3>
             <p className="Event-Description">{description}</p>
-            <Button text={buttonText}/>
-        
+            
+            <Link text={buttonText} className="Button" to="/event">{link.event}</Link>
         </div>
     );
 }
+
 export default Event;

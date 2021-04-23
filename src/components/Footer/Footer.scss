@@ -1,20 +1,22 @@
+@import "/src/theme.scss";
+
 .Footer {
-    background-color: #333333;
-    padding: 20px;
-	
-	&-Text {
-        color: #d0d0d0;
-        font-size: 12px;
-        text-align: center;
-    }
+  background-color: $darkGrey;
+  padding: 20px;
 
-    @media screen and (min-width: 768px) {
-        padding: 30px;
+&-Text {
+      color: $lightGrey;
+      font-size: 12px;
+      text-align: center;
+  }
 
-        &-Text {
-            font-size: 14px;
-        }
-    }
- 
+  @media screen and (min-width: 768px) {
+      padding: 30px;
+
+      &-Text {
+          font-size: 14px;
+      }
+  }
+
 }
 

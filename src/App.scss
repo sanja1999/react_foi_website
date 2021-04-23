@@ -2,19 +2,24 @@
 
 @import-normalize;
 
-
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0
-  ;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
 }
 
 html {
   height: 100%;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
   height: 100%;
 }
