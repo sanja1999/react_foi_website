@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
+
 import {
     colors,
     breakpoints,
@@ -34,5 +36,9 @@ export const Title = styled.h3 `
 export const Description = styled.p `
     font-size: 14px;
     margin-bottom: 20px;
+`;
+
+export const StyleLink = styled(Link)`
+  text-decoration: none;
 `;
 

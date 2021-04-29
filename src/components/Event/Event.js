@@ -10,7 +10,8 @@ import {
     Title,
     Description,
     imgAlt,
-    route
+    route,
+    StyleLink
 } from './EventStyles';
 
 const Event = ({
@@ -28,9 +29,9 @@ const Event = ({
             </Figure>
             <Title>{title}</Title>
             <Description>{description}</Description>
-            <Link to="/event" style={{ textDecoration: 'none' }}>
-                <Button text={buttonText}/>
-            </Link>
+            <StyleLink to={route}>
+                <Button text={buttonText} />
+            </StyleLink>
         </EventWrapper>
     );
 }
