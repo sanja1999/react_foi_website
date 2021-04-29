@@ -1,36 +1,46 @@
-// Imports
-import React from "react";
-import {Link} from "react-router-dom";
-import "./Header.scss";
+//route
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+//import logo
+import LogoImage from '../../assets/images/logo.png';
+//style
+import {
+    HeaderWrapper,
+    Inner,
+    Logo,
+    LogoContainer,
+    Nav,
+    NavItem,
+    Hamburger,
+    HamburgerLine
+}from './HeaderStyle';
 
-//Images
-import Logo from "../../assets/images/logo.png";
-
-const link = {
-    home: "Home",
-    events: "Events",
+//links
+const links = {
+    home: 'Home',
+    events: 'Events',
 }
 
+//structure Header
 const Header = () => {
-    return ( 
-        <header className="Header">
-        <div className="Header-Inner">
-           <Link to ="/" className="Header-LogoContainer">
-                <img src={Logo} className="Header-Logo" alt = "Logo fakulteta"/>
-            </Link>
-            <div className="Header-NavHamburger">
-                <div className="Header-NavHamburgerLine"></div>
-                <div className="Header-NavHamburgerLine"></div>
-                <div className="Header-NavHamburgerLine"></div>
-            </div>
-            <nav className="Header-Nav">
-                <Link className="Header-NavItem" to="/">{link.home}</Link>
-                <Link className="Header-NavItem" to="/events">{link.events}</Link>
-            </nav>
-        </div>
-
-    </header>
-     );
+    return (
+        <HeaderWrapper>
+            <Inner>
+                <LogoContainer to="/home">
+                    <Logo src={LogoImage} alt="Logo" />
+                </LogoContainer>
+                <Hamburger>
+                    <HamburgerLine />   
+                    <HamburgerLine />
+                    <HamburgerLine />
+                </Hamburger>
+                <Nav>
+                    <NavItem exact to="/">Home</NavItem>
+                    <NavItem to="/events">Events</NavItem>
+                </Nav>
+            </Inner>
+        </HeaderWrapper>
+    );
 }
- 
+
 export default Header;

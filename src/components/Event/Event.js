@@ -1,29 +1,37 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Button from '../Button/Button';
 import './Event.scss';
 
-import { Link } from 'react-router-dom';
-
-const link = {
-    event: 'Find out more',
-  }
+import {
+    Event as EventWrapper,
+    Figure,
+    Image,
+    Title,
+    Description,
+    imgAlt,
+    route
+} from './EventStyles';
 
 const Event = ({
     image,
     title,
     description,
-    buttonText
+    route,
+    buttonText,
+    imageAlt
 }) => {
     return (
-        <div className="Event">
-            <figure className="Event-Figure">
-                <img src={image} alt="Design" className="Event-Image"/>
-            </figure>
-            <h3 className="Event-Title">{title}</h3>
-            <p className="Event-Description">{description}</p>
-            
-            <Link text={buttonText} className="Button" to="/event">{link.event}</Link>
-        </div>
+        <EventWrapper>
+            <Figure>
+                <Image src={image} alt={imageAlt}/>
+            </Figure>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
+            <Link to="/event" style={{ textDecoration: 'none' }}>
+                <Button text={buttonText}/>
+            </Link>
+        </EventWrapper>
     );
 }
 
