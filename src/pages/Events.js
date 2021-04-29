@@ -16,8 +16,7 @@ const Events = () => {
             <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
             <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
             <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            
+            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>    
         
         </Grid>
         </Section>
