@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 import {
-    colors,
-    breakpoints,
     transitionCubic,
     boxShadow,
     boxShadowHover
 } from '../../lib/style/theme';
+
 export const Event = styled.div `
     padding: 20px;
     border-radius: 6px;

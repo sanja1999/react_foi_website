@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import Button from '../Button/Button';
-import { useHistory } from 'react-router';
 
 
 import { 
@@ -11,9 +9,6 @@ import {
     ItemValue 
 } from './EventContainerStyles';
 
-const link = {
-    event: 'Prijavi se',
-}
 
 const EventContainer = ({
   title, 
@@ -53,6 +48,5 @@ const EventContainer = ({
     
      );
 }
-
  
 export default EventContainer;

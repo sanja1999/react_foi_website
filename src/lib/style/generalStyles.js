@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { colors, breakpoints, transitionEase } from "../../lib/style/theme";
-import { Link, NavLink } from "react-router-dom";
+import styled from 'styled-components';
+import { colors, breakpoints, transitionEase } from '../../lib/style/theme';
 
 export const EventsTitle = styled.h2`
   text-align: center;

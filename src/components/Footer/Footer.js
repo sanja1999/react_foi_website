@@ -1,4 +1,3 @@
-// Imports
 import React from 'react';
 import { Footer as FooterStyle, Copyright } from './FooterStyles';
 

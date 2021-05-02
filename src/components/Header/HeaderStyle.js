@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+
 import {
     colors,
     breakpoints,
     transitionEase
 } from '../../lib/style/theme';
-import { Link, NavLink } from 'react-router-dom';
+
 export const HeaderWrapper = styled.header`
     background-color: ${colors.white};
     width: 100%;
@@ -14,6 +16,7 @@ export const HeaderWrapper = styled.header`
     z-index: 1;
     height: 80px;
 `;
+
 export const Inner = styled.div`
     height: 100%;
     padding: 15px;
@@ -32,11 +35,13 @@ export const Inner = styled.div`
         max-width: 1280px;
     }
 `;
+
 export const Logo = styled.img`
     width: 125%;
     height: 125%;
     object-fit: contain;
 `;
+
 export const LogoContainer = styled(NavLink)`
     display: block;
     width: 50px;
@@ -44,12 +49,14 @@ export const LogoContainer = styled(NavLink)`
         width: 60px;
     }
 `;
+
 export const Nav = styled.nav`
     display: none;  
     @media screen and (${breakpoints.desktop}) {
         display: block;
     }
 `;
+
 export const NavItem = styled(NavLink)`
     &:hover {
         color: ${colors.red};
@@ -57,6 +64,7 @@ export const NavItem = styled(NavLink)`
     &:last-child {
         margin-right: 0;
     }
+
     @media screen and (${breakpoints.desktop}) {
         display: inline-block;
         text-decoration: none;
@@ -68,23 +76,8 @@ export const NavItem = styled(NavLink)`
         margin-right: 60px;
         transition: ${transitionEase};
     }
+    
     @media screen and (${breakpoints.desktopLarge}) {
         font-size: 18px;
-    }
-`;
-export const Hamburger = styled.div`
-    width: 25px;
-    @media screen and (${breakpoints.desktop}) {
-        display: none;
-    }
-`;
-export const HamburgerLine = styled.div`    
-    width: 100%;
-    height: 2px;
-    border-radius: 100px;
-    background-color: ${colors.darkGrey};
-    margin-bottom: 6px;
-    &:last-child {
-        margin-bottom: 0;
     }
 `;

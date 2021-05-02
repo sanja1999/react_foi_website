@@ -1,8 +1,6 @@
-import Main from '../components/Main/Main';
+import React, {useState, useEffect} from 'react';
 import Section from '../components/Section/Section';
-import { Center, Grid } from "../lib/style/generalStyles";
-import EventCard from '../components/EventCard/EventCard';
-import React, { useState, useEffect, useImperativeHandle } from "react";
+import { Center, Grid } from '../lib/style/generalStyles';
 import eventMock from "../lib/mock/events";
 import EventsCard from '../components/EventCard/EventCard';
 import { EventsTitle } from '../lib/style/generalStyles';
@@ -38,7 +36,7 @@ const Events = () => {
             />
         </Center>
               {events &&
-                <Grid columns={4}>
+                <Grid columns={7}>
                   {events.map(
                     (event) =>
                         <EventsCard 
