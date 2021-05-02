@@ -1,28 +1,55 @@
 import Main from '../components/Main/Main';
 import Section from '../components/Section/Section';
-import Grid from '../components/Grid/Grid';
+import { Grid } from "../lib/style/generalStyles";
 import EventCard from '../components/EventCard/EventCard';
+import React, { useState, useEffect, useImperativeHandle } from "react";
+import eventMock from "../lib/mock/events";
+import EventsCard from '../components/EventCard/EventCard';
+import { EventsTitle } from '../lib/style/generalStyles';
+// import { SectionEvents } from './EventsStyles';
 
 const Events = () => {
-    return ( 
+    const [events, setEvent] = useState(0);
+  
+    useEffect(() => {
+      setTimeout(() => {
+        setEvent(eventMock);
+      }, 1000);
+    }, [events]);
+    return (
         <>
-        <Main>
-        <Section>
-        <Grid columns="4"> 
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>
-            <EventCard title="UI/UX design workshop" location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" firm="Speck" buttonText="Find out more"/>    
+        <EventsTitle>Events</EventsTitle>
+          <Main>
+          <Section>
+            
+              {events &&
+                <Grid columns={7}>
+                  {events.map(
+                    (event) =>
+                        <EventsCard 
+                        key={event.id}
+                        title={event.title}
+                        location={event.location}
+                        dateTime={event.dateTime}
+                        seats={event.availability}
+                        firm={event.company}
+                        buttonText="Find out more"
+                        
         
-        </Grid>
-        </Section>
-        </Main>
+                    />
+                    
+                  
+              )}
+            </Grid>
+          }
+          </Section>
+          </Main>
         </>
-     );
-}
+      );
+    };
+          
+  
+        
+ 
  
 export default Events;
