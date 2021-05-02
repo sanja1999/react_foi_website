@@ -7,6 +7,11 @@ export const EventsTitle = styled.h2`
   margin-top: 20px;
 `;
 
+export const Center = styled.div`
+  display: grid;
+  place-items: center;
+`;
+
 export const Grid = styled.div`
   display: grid;
   row-gap: 32px;
