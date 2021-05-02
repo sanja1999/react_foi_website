@@ -34,6 +34,7 @@ const Home = () => {
                           description={event.shortDescription}
                           imgAlt={event.imgAlt}
                           buttonText="Find out more"
+                          eventId={event.id}
                           />
                   )
               )}

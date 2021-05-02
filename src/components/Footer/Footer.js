@@ -1,14 +1,12 @@
 // Imports
 import React from 'react';
-import './Footer.scss';
+import { Footer as FooterStyle, Copyright } from './FooterStyles';
 
 const Footer = () => {
     return (
-        <footer className="Footer">
-            <div className="Footer-Text">
-                <p>Copyright &copy; 2021. S. Šajfar</p>
-            </div>
-        </footer>
+        <FooterStyle>
+            <Copyright>Copyright &copy; 2021. S. Šajfar</Copyright>
+        </FooterStyle>          
     );
 }
 

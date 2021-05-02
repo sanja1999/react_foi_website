@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import Button from '../Button/Button';
-import './Event.scss';
+import { useHistory } from 'react-router';
 
 import {
     Event as EventWrapper,
@@ -9,7 +9,6 @@ import {
     Image,
     Title,
     Description,
-    imgAlt,
     route,
     StyleLink
 } from './EventStyles';
@@ -20,17 +19,18 @@ const Event = ({
     description,
     route,
     buttonText,
-    imageAlt
+    eventId
 }) => {
+    const history = useHistory();
     return (
         <EventWrapper>
             <Figure>
-                <Image src={image} alt={imageAlt}/>
+                <Image src={image} alt='Design'/>
             </Figure>
             <Title>{title}</Title>
             <Description>{description}</Description>
             <StyleLink to={route}>
-                <Button text={buttonText} />
+                <Button onClick={() => history.push(`/event/${eventId}`)} text={buttonText} />
             </StyleLink>
         </EventWrapper>
     );

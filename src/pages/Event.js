@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import eventsMock from '../lib/mock/events'
-import Main from '../components/Main/Main';
-import Section from '../components/Section/Section';
-import ImageDesign from '../assets/images/design.jpg';
 import EventContainer from '../components/EventContainer/EventContainer';
+
+
+import {
+  SectionEvent,
+  Title,
+  Figure,
+  Image,
+  Content,
+  Description,
+  EventContaineroWrapper,
+} from '../components/EventContainer/EventContainerStyles';
 
 const Event = (props) => {
     const [events, setEvents] = useState(null);
@@ -22,13 +30,32 @@ const Event = (props) => {
 
     return ( 
         <>
-        <Main>
-        <Section>
-            <EventContainer title="UI/UX design workshop" image={ImageDesign} location="Hodnik FOI-a" dateTime="14.10.(9:00-16:00h)" seats="15/60" company="Speck" buttonText="Prijavi se"/>
-        </Section>
-        </Main>
-        </>
-     );
-}
+          {event && (
+            <>
+          <SectionEvent>
+            <Title>{event && event.title}</Title>
+            <EventContaineroWrapper>
+            <Figure>
+                <Image src={event.imageUrl} alt={event.imageAlt} />
+              </Figure>
+              <Content>
+                <EventContainer
+                  location={event.location}
+                  dateTime={event.dateTime}
+                  seats={event.availability}
+                  company={event.company}
+                  hasButton={true}
+                  route='/event'
+                  buttonText='Prijavi se'
+                />
+              </Content>  
+            </EventContaineroWrapper>
+            <Description>{event.description}</Description>
+          </SectionEvent>
+          </>
+      )}
+    </>
+  );
+};
  
 export default Event;

@@ -2,6 +2,11 @@ import styled from "styled-components";
 import { colors, breakpoints, transitionEase } from "../../lib/style/theme";
 import { Link, NavLink } from "react-router-dom";
 
+export const EventsTitle = styled.h2`
+  text-align: center;
+  margin-top: 20px;
+`;
+
 export const Grid = styled.div`
   display: grid;
   row-gap: 32px;
