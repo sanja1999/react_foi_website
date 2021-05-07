@@ -13,6 +13,9 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Event from './pages/Event';
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+import Admin from "./pages/Admin";
 
 function App() {
     return (
@@ -23,6 +26,9 @@ function App() {
             <Route exact path="/" component={Home}/>
             <Route path="/events" component={Events}/>
             <Route path="/event/:id" component={Event} />
+            <Route path="/register" component={Register}/>
+            <Route path="/login" component={Login}/>
+            <Route path="/admin" component={Admin}/>
           </Main>
         <Footer/>
       </Router>

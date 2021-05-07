@@ -23,6 +23,9 @@ const Header = () => {
                 <Nav>
                     <NavItem exact to="/">Home</NavItem>
                     <NavItem to="/events">Events</NavItem>
+                    <NavItem to="/register">Register</NavItem>
+                    <NavItem to="/login">Login</NavItem>
+                    <NavItem to="/admin">Admin</NavItem>
                 </Nav>
             </Inner>
         </HeaderWrapper>
